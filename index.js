@@ -2,7 +2,15 @@
 
 (function(window, _) {
   window.gamz = window.gamz || {
-    numz: {/* other code */},
+    numz: {/* other code */
+      getDistance(pointA, pointB){
+    const
+    distanceX = pointB.x - pointA.x,
+    distanceY = pointB.y - pointA.y;
+    return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+      }
+      
+    },
     phyz: {
       /**
        * Returns an Object with basic properties utilized in a 
