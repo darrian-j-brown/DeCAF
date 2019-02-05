@@ -1,14 +1,21 @@
 // Implementation of makeBody() //
 
 (function(window, _) {
-  window.gamz = window.gamz || {
+  // delete this comment ** If any errors occurs remember to update lib because of the change on line 5 for window.gamz to window.decaf ** 
+  window.decaf = window.decaf || {
     numz: {/* other code */
       getDistance(pointA, pointB){
     const
     distanceX = pointB.x - pointA.x,
     distanceY = pointB.y - pointA.y;
     return Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-      }
+      },
+      degreesToRadians(degrees) {
+          return degrees * Math.PI / 180;  
+        },
+        radiansToDegrees(radians) {
+          return radians * 180 / Math.PI;  
+        }
       
     },
     phyz: {
